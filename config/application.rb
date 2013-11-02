@@ -9,6 +9,9 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+require 'yaml'
+APP_CONFIG = YAML.load_file(File.expand_path "../app_config.yml", __FILE__)[Rails.env].symbolize_keys!
+
 module Serverly
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
