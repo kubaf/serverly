@@ -1,6 +1,7 @@
 Serverly::Application.routes.draw do
 
   resources :servers
+  resources :images
   root to: "servers#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
